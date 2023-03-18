@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header>
+        Casino
+    </header>
+    <!--   Section for betting -->
+    <section id="bet-form">
+        <h1>Your Balance: <strong>500$</strong></h1>
+        <form>
+            <div>
+                <input type="number" placeholder="Place a bet" id="bet">
+            </div>
+            <div id="validation"></div>
+            <div>
+                <button type="button" onclick="rollTheDiceHandler()">Roll the dice</button>
+            </div>
+        </form>
+    </section>
+    <!--   Section for result -->
+    <section id="bet-result">
+        <div id="resultInfo">
+            //Значение можно не писать
+            <h1>Your Balance: <strong></strong></h1>
+            <p>On dices: <strong id="dice1result">4</strong>, <strong id="dice2result">4</strong></p>
+            //Значение можно не писать
+            <p id="resultText">You lost <strong id="betAmount"></strong></p>
+        </div>
+        <form>
+            <button type="button" id="betRsltBtn" onclick="goBackHandler()">Try more</button>
+        </form>
+    </section>
+    <!--   Section for point -->
+    <section id="bet-point">
+        <div id="resultBetInfo">
+            //Значение можно не писать
+            <h1>Your bet: <strong></strong></h1>
+            //Значение можно не писать
+            <p>On dices: <strong id="dice1result"></strong>, <strong id="dice2result"></strong></p>
+            //Значение можно не писать
+            <p>Your point <strong id="betAmount"></strong></p>
+        </div>
+        <p>Keep playing</p>
+        <form>
+            <button type="button" onclick="rollTheDiceHandler('point')">Roll the dice</button>
+        </form>
+    </section>
+    <footer>
+        <img src="https://www.freeiconspng.com/thumbs/dice-png/dice-png-transparent-2012-at-1200-674-in-dice-15.png" alt="">
+    </footer>
+</main>
+<script src="main.js"></script>
+</body>
+</html>
